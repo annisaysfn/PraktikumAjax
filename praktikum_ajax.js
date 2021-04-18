@@ -15,14 +15,12 @@ $(function (){
 });
 
 /**
- * Berikut merupakan fungsi untuj fetch data dari internet menggunakan AJAX Jquery
+ * Berikut merupakan fungsi untuk fetch data dari internet menggunakan AJAX Jquery
  * Kita menggunakan https://jsonplaceholder.typicode.com/photos sebagai urlnya,
- * Silakan dibuka dulu agar paham
  */
 $(function (){
     let url = "https://jsonplaceholder.typicode.com/photos";
     //mengambil button untuk fetch data
-    //boleh hilangkan line 26 dan 46 jika ingin data langsung terload saat membuka browser
     $("#getPost").on("click", function () {
         //Memanggil Jquery Ajax
         $.ajax({
@@ -33,7 +31,7 @@ $(function (){
             //jika sukses
             success: function (data) {
                 let data_html = '';
-                //loaping data (Ambil satu persatu data)
+                //looping data (Ambil satu persatu data)
                 $.each(data, function (i, item) {
 
                     //mengkonversi hasil loop tadi ke HTML
